@@ -1,0 +1,70 @@
+{
+  "n_configs": 5,
+  "results": [
+    {
+      "run": 5,
+      "config": {
+        "lr": 1e-05,
+        "batch_size": 16,
+        "epochs": 4
+      },
+      "val_macro_f1": 0.7767,
+      "val_accuracy": 0.7766,
+      "val_f1_grounded": 0.8098,
+      "val_f1_partial": 0.7353,
+      "val_f1_not_grounded": 0.7849
+    },
+    {
+      "run": 4,
+      "config": {
+        "lr": 2e-05,
+        "batch_size": 16,
+        "epochs": 3
+      },
+      "val_macro_f1": 0.7753,
+      "val_accuracy": 0.7766,
+      "val_f1_grounded": 0.8139,
+      "val_f1_partial": 0.732,
+      "val_f1_not_grounded": 0.78
+    },
+    {
+      "run": 1,
+      "config": {
+        "lr": 2e-05,
+        "batch_size": 32,
+        "epochs": 3
+      },
+      "val_macro_f1": 0.7677,
+      "val_accuracy": 0.769,
+      "val_f1_grounded": 0.8062,
+      "val_f1_partial": 0.728,
+      "val_f1_not_grounded": 0.769
+    },
+    {
+      "run": 3,
+      "config": {
+        "lr": 3e-05,
+        "batch_size": 32,
+        "epochs": 2
+      },
+      "val_macro_f1": 0.7644,
+      "val_accuracy": 0.7652,
+      "val_f1_grounded": 0.8021,
+      "val_f1_partial": 0.725,
+      "val_f1_not_grounded": 0.7661
+    },
+    {
+      "run": 2,
+      "config": {
+        "lr": 1e-05,
+        "batch_size": 32,
+        "epochs": 4
+      },
+      "val_macro_f1": 0.762,
+      "val_accuracy": 0.7628,
+      "val_f1_grounded": 0.795,
+      "val_f1_partial": 0.7183,
+      "val_f1_not_grounded": 0.7729
+    }
+  ]
+}

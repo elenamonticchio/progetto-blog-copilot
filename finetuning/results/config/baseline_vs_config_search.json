@@ -1,0 +1,28 @@
+{
+  "strategy": "truncation",
+  "model_name": "config_search",
+  "best_run": 5,
+  "best_config": {
+    "lr": 1e-5,
+    "batch_size": 16,
+    "epochs": 4
+  },
+  "baseline": {
+    "model": "xlm-roberta-base (no fine-tuning)",
+    "accuracy": 0.3326,
+    "macro_f1": 0.1664,
+    "f1_grounded": 0.0,
+    "f1_partial": 0.0,
+    "f1_not_grounded": 0.4992
+  },
+  "finetuned": {
+    "model": "xlm-roberta FT config search (run_5)",
+    "accuracy": 0.787,
+    "macro_f1": 0.7873,
+    "f1_grounded": 0.8146,
+    "f1_partial": 0.7406,
+    "f1_not_grounded": 0.8067
+  },
+  "delta_accuracy": 0.4544,
+  "delta_macro_f1": 0.6209
+}

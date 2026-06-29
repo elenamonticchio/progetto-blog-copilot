@@ -1,0 +1,16 @@
+{
+  "truncation": {
+    "accuracy": 0.787,
+    "macro_f1": 0.7873,
+    "f1_grounded": 0.8146,
+    "f1_partial": 0.7406,
+    "f1_not_grounded": 0.8067
+  },
+  "decomposition": {
+    "accuracy": 0.7786,
+    "macro_f1": 0.7794,
+    "f1_grounded": 0.805,
+    "f1_partial": 0.7326,
+    "f1_not_grounded": 0.8005
+  }
+}
