@@ -582,7 +582,6 @@ def verify_and_select(state: AgentState) -> dict:
     topic = state["current_topic"]
     _hdr(f"VERIFY & SELECT  {topic}")
 
-    new_tool_outputs: list[dict] = []
     new_reasoning: list[dict] = []
 
     tool_outputs = state.get("tool_outputs", []) or []
@@ -701,13 +700,6 @@ def verify_and_select(state: AgentState) -> dict:
         print()
         print(f"  → {len(kept_docs)} tenuti  |  {n_scartati} scartati (score < {_MIN_SCORE})")
 
-        new_tool_outputs.append({
-            "tool": "score_interestingness",
-            "args": f"{len(all_docs)} doc (locali+online) su '{topic}'",
-            "output": (
-                f"{len(kept_docs)} tenuti su {len(all_docs)} (soglia {_MIN_SCORE})"
-            ),
-        })
         new_reasoning.append({
             "thought": "Filtro tutti i documenti per qualita': tengo solo quelli con score>=5 (pertinenti).",
             "action": f"score_interestingness x {len(all_docs)}",
@@ -719,7 +711,6 @@ def verify_and_select(state: AgentState) -> dict:
     return {
         "retrieved_docs": [_doc_to_dict(d) for d in kept_docs],
         "citations": new_citations,
-        "tool_outputs": new_tool_outputs,
         "reasoning_trace": new_reasoning,
     }
 
